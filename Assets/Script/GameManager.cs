@@ -28,9 +28,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
-            Resource[nowVein]++;
-        }
+        
+    }
+
+    public void click(){
+        Resource[nowVein]++;
+        Debug.Log("hit");
     }
 
     

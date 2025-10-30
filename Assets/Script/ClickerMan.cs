@@ -16,4 +16,8 @@ public class ClickerMan : MonoBehaviour
     {
         
     }
+
+    public void clickevent(){
+        Debug.Log("hit");
+    }
 }
