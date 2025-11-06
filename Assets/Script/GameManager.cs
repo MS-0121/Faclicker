@@ -7,119 +7,55 @@ public class GameManager : MonoBehaviour
 {
     //鉱脈名は0から10までこの順番
     string[] VeinName = { "鉄", "銅", "錫", "石炭", "金", "硫黄", "水", "粘土", "砂", "石膏", "方解石"};
+    //製錬炉のレシピは0から3までこの順番
+    string[] SmeltingFurnaceName = { "鉄インゴット", "銅インゴット", "錫インゴット", "金インゴット" };
+
+    //資源量の変数
 
     [SerializeField]
     [NamedArrayAttribute(new string[] { "鉄", "銅", "錫", "石炭", "金", "硫黄", "水", "粘土", "砂", "石膏", "方解石"})]
-    bool[] VeinFlag = new bool[11]; //現在掘っている鉱脈
+    public int[] VeinResource = new int[11]; //それぞれの資源の量
 
     [SerializeField]
-    [NamedArrayAttribute(new string[] { "鉄", "銅", "錫", "石炭", "金", "硫黄", "水", "粘土", "砂", "石膏", "方解石"})]
-    public int[] Resource = new int[11]; //それぞれの資源の量
+    [NamedArrayAttribute(new string[] { "鉄インゴット", "銅インゴット", "錫インゴット", "金インゴット"})]
+    public int[] SmeltingFurnaceResource = new int[4]; //それぞれの部品の量
+
+    //クリックの有効変数
     int nowVein; //今掘ってる鉱脈を指定する変数
+    int nowSmeltingFurnace; //今生産している機械の変数
+    
+    //その他
     int Vein = 11; //今の鉱脈資源の数
+    int SmeltingFurnace = 4; //今の製錬炉レシピの数
 
+    //今使用している施設
+    public bool VeinBool = true;
+    public bool SmeltingFurnaceBool = false;
     [SerializeField] private TextManager TM;
+    [SerializeField] private BackgroundChange BC;
     void Start()
     {
-        nowVein = 0;
-        VeinFlag[nowVein] = true;
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
     public void click(){
-        Resource[nowVein]++;
-        Debug.Log("hit");
-    }
-
-    
-
-    //ボタン用関数
-
-    public void IronVein(){
-        VeinReset();
-        nowVein = 0;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void CopperVein(){
-        VeinReset();
-        nowVein = 1;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void TinVein(){
-        VeinReset();
-        nowVein = 2;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void CoalVein(){
-        VeinReset();
-        nowVein = 3;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void GoldVein(){
-        VeinReset();
-        nowVein = 4;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void SulferVein(){
-        VeinReset();
-        nowVein = 5;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void WaterVein(){
-        VeinReset();
-        nowVein = 6;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void ClayVein(){
-        VeinReset();
-        nowVein = 7;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void SandVein(){
-        VeinReset();
-        nowVein = 8;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void GypsumVein(){
-        VeinReset();
-        nowVein = 9;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void CalsiteVein(){
-        VeinReset();
-        nowVein = 10;
-        TM.ResourceChange(nowVein);
-        VeinFlag[nowVein] = true;
-    }
-
-    public void VeinReset(){
-        for(int i = 0;i < Vein;i++){
-            VeinFlag[i] = false;
+        if(VeinBool){
+            VeinResource[nowVein]++;
+        }else if(SmeltingFurnaceBool){
+            SmeltingFurnaceResource[nowSmeltingFurnace]++;
         }
+    }
+
+    public void nowVeinChange(int num){
+        nowVein = num;
+    }
+
+    public void nowSmeltingFurnaceChange(int num){
+        nowSmeltingFurnace = num;
     }
 }
