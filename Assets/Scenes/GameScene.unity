@@ -344,12 +344,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: GoldVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -752,12 +752,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: SandVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1274,12 +1274,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: TinVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1946,8 +1946,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: IronVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2092,12 +2092,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: SulferVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2532,12 +2532,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: GypsumVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2741,12 +2741,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: CalsiteVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2963,12 +2963,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427692}
         m_TargetAssemblyTypeName: SmeltingFurnaceManager, Assembly-CSharp
-        m_MethodName: CopperIngot
-        m_Mode: 1
+        m_MethodName: SmeltingFurnaceButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3109,12 +3109,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427692}
         m_TargetAssemblyTypeName: SmeltingFurnaceManager, Assembly-CSharp
-        m_MethodName: TinIngot
-        m_Mode: 1
+        m_MethodName: SmeltingFurnaceButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3554,12 +3554,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: CopperVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3835,8 +3835,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427692}
         m_TargetAssemblyTypeName: SmeltingFurnaceManager, Assembly-CSharp
-        m_MethodName: IronIngot
-        m_Mode: 1
+        m_MethodName: SmeltingFurnaceButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4251,9 +4251,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1294427689}
   - component: {fileID: 1294427688}
-  - component: {fileID: 1294427690}
   - component: {fileID: 1294427691}
   - component: {fileID: 1294427692}
+  - component: {fileID: 1294427693}
   m_Layer: 0
   m_Name: GameManagerObj
   m_TagString: Untagged
@@ -4294,18 +4294,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1294427690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294427687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1f320c46dbf3c948901686211c47cd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1294427691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4338,6 +4326,22 @@ MonoBehaviour:
   TM: {fileID: 820988792}
   BC: {fileID: 1717272975}
   GM: {fileID: 1294427688}
+--- !u!114 &1294427693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294427687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66b9d8221208774b9730c1e9c6cf7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecipeFlag: 
+  TM: {fileID: 0}
+  BC: {fileID: 0}
+  GM: {fileID: 0}
 --- !u!1 &1376900251
 GameObject:
   m_ObjectHideFlags: 0
@@ -4559,12 +4563,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427692}
         m_TargetAssemblyTypeName: SmeltingFurnaceManager, Assembly-CSharp
-        m_MethodName: GoldIngot
-        m_Mode: 1
+        m_MethodName: SmeltingFurnaceButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4705,12 +4709,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: ClayVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5457,12 +5461,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: WaterVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6678,12 +6682,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1294427691}
         m_TargetAssemblyTypeName: VeinManager, Assembly-CSharp
-        m_MethodName: CoalVein
-        m_Mode: 1
+        m_MethodName: VeinButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

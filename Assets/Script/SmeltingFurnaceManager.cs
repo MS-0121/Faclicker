@@ -21,13 +21,29 @@ public class SmeltingFurnaceManager : MonoBehaviour
         //SmeltingFurnaceFlag[nowSmeltingFurnace] = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void SmeltingFurnaceButton(int now){
+        //ボタン用関数
+        Reset();
+        nowSmeltingFurnace = now;
+        Set(nowSmeltingFurnace);
     }
 
-    //ボタン用関数
+    public void Reset(){
+        for(int i = 0;i < SmeltingFurnace;i++){
+            SmeltingFurnaceFlag[i] = false;
+        }
+    }
+
+    public void Set(int num){
+        TM.SmeltingFurnaceResourceChange(num);
+        SmeltingFurnaceFlag[num] = true;
+        BC.SmeltingFurnaceImageChange(num);
+        GM.nowSmeltingFurnaceChange(num);
+        GM.VeinBool = false;
+        GM.SmeltingFurnaceBool = true;
+    }
+    
+    /*ボタン用関数
     public void IronIngot(){
         Reset();
         nowSmeltingFurnace = 0;
@@ -51,19 +67,5 @@ public class SmeltingFurnaceManager : MonoBehaviour
         nowSmeltingFurnace = 3;
         Set(nowSmeltingFurnace);
     }
-
-    public void Reset(){
-        for(int i = 0;i < SmeltingFurnace;i++){
-            SmeltingFurnaceFlag[i] = false;
-        }
-    }
-
-    public void Set(int num){
-        TM.SmeltingFurnaceResourceChange(num);
-        SmeltingFurnaceFlag[num] = true;
-        BC.SmeltingFurnaceImageChange(num);
-        GM.nowSmeltingFurnaceChange(num);
-        GM.VeinBool = false;
-        GM.SmeltingFurnaceBool = true;
-    }
+    */
 }

@@ -25,13 +25,28 @@ public class VeinManager : MonoBehaviour
         VeinFlag[nowVein] = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void VeinButton(int now){
+        Reset();
+        nowVein = now;
+        Set(nowVein);
     }
 
-    //ボタン用関数
+    public void Reset(){
+        for(int i = 0;i < Vein;i++){
+            VeinFlag[i] = false;
+        }
+    }
+
+    public void Set(int num){
+        TM.VeinResourceChange(num);
+        VeinFlag[num] = true;
+        BC.VeinImageChange(num);
+        GM.nowVeinChange(num);
+        GM.VeinBool = true;
+        GM.SmeltingFurnaceBool = false;
+    }
+
+    /*ボタン用関数
 
     public void IronVein(){
         VeinReset();
@@ -98,19 +113,5 @@ public class VeinManager : MonoBehaviour
         nowVein = 10;
         VeinSet(nowVein);
     }
-
-    public void VeinReset(){
-        for(int i = 0;i < Vein;i++){
-            VeinFlag[i] = false;
-        }
-    }
-
-    public void VeinSet(int num){
-        TM.VeinResourceChange(num);
-        VeinFlag[num] = true;
-        BC.VeinImageChange(num);
-        GM.nowVeinChange(num);
-        GM.VeinBool = true;
-        GM.SmeltingFurnaceBool = false;
-    }
+    */
 }
