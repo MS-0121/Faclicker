@@ -5435,6 +5435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a8fa3e5a1eda44da7c13e7b400e245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FrontImageObject: {fileID: 1385450682}
   VeinImage:
   - {fileID: 21300000, guid: 3edbaf8fac44d114f977bcaa5dac90d0, type: 3}
   - {fileID: 21300000, guid: 7947201f389fa7f4ab8c9be1a6d42bbf, type: 3}
@@ -5454,7 +5455,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 504456f2c5d684045a23155e798c5488, type: 3}
   - {fileID: 21300000, guid: eafde43703fcd9c4f9fa0d27abc4b3e0, type: 3}
   - {fileID: 21300000, guid: 2f4bb45ed2000364d8f49cc41ad31cc5, type: 3}
-  FrontPillarImage: {fileID: 1385450682}
 --- !u!1 &1768267397
 GameObject:
   m_ObjectHideFlags: 0
