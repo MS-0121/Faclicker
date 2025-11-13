@@ -14,6 +14,11 @@ public class BackgroundChange : MonoBehaviour
     [SerializeField]
     [NamedArrayAttribute(new string[] { "鉄インゴット", "銅インゴット", "錫インゴット", "金インゴット", "製錬炉の手前の画像(未作成)" })]
     Sprite[] SmeltingFurnaceImage = new Sprite[5];
+
+    [SerializeField]
+    [NamedArrayAttribute(new string[] { "ブロンズインゴット", "合金製錬炉の手前の画像(未作成)" })]
+    Sprite[] AlloySmelterImage = new Sprite[2];
+
     private Image NowImage;
     private Image FrontImage;
     //private Color pillar;
@@ -36,7 +41,12 @@ public class BackgroundChange : MonoBehaviour
     }
 
     public void SmeltingFurnaceImageChange(int now){
-        FrontImage.sprite = SmeltingFurnaceImage[4];
+        FrontImage.sprite = SmeltingFurnaceImage[SmeltingFurnaceImage.Length-1];
         NowImage.sprite = SmeltingFurnaceImage[now];
+    }
+
+    public void AlloySmelterImageChange(int now){
+        FrontImage.sprite = AlloySmelterImage[AlloySmelterImage.Length-1];
+        NowImage.sprite = AlloySmelterImage[now];
     }
 }

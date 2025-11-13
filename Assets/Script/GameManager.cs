@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     string[] VeinName = { "鉄", "銅", "錫", "石炭", "金", "硫黄", "水", "粘土", "砂", "石膏", "方解石"};
     //製錬炉のレシピは0から3までこの順番
     string[] SmeltingFurnaceName = { "鉄インゴット", "銅インゴット", "錫インゴット", "金インゴット" };
+    //合金製錬機のレシピは0か0までこの順番
+    string[] AlloySmelterName = { "ブロンズインゴット"};
 
     //資源量の変数
 
@@ -20,17 +22,24 @@ public class GameManager : MonoBehaviour
     [NamedArrayAttribute(new string[] { "鉄インゴット", "銅インゴット", "錫インゴット", "金インゴット"})]
     public int[] SmeltingFurnaceResource = new int[4]; //それぞれの部品の量
 
+    [SerializeField]
+    [NamedArrayAttribute(new string[] { "ブロンズインゴット"})]
+    public int[] AlloySmelterResource = new int[1]; //それぞれの部品の量
+
     //クリックの有効変数
     int nowVein; //今掘ってる鉱脈を指定する変数
     int nowSmeltingFurnace; //今生産している機械の変数
+    int nowAlloySmelter; //今生産している機械の変数
     
     //その他
     int Vein = 11; //今の鉱脈資源の数
     int SmeltingFurnace = 4; //今の製錬炉レシピの数
+    int AlloySmelter = 1; //今の合金精錬機のレシピの数
 
     //今使用している施設
     public bool VeinBool = true;
     public bool SmeltingFurnaceBool = false;
+    public bool AlloySmelterBool = false;
     [SerializeField] private TextManager TM;
     [SerializeField] private BackgroundChange BC;
     void Start()
@@ -57,5 +66,9 @@ public class GameManager : MonoBehaviour
 
     public void nowSmeltingFurnaceChange(int num){
         nowSmeltingFurnace = num;
+    }
+
+    public void nowAlloySmelterChange(int num){
+        nowAlloySmelter = num;
     }
 }

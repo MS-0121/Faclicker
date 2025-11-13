@@ -10,8 +10,10 @@ public class TextManager : MonoBehaviour
     [SerializeField] private GameManager GM;
     int nowVein = 0;
     int nowSmeltingFurnace = 0;
+    int nowAlloySmelter = 0;
     string[] VeinName = { "鉄", "銅", "錫", "石炭", "金", "硫黄", "水", "粘土", "砂", "石膏", "方解石"};
     string[] SmeltingFurnaceName = { "鉄インゴット", "銅インゴット", "錫インゴット", "金インゴット"};
+    string[] AlloySmelterName = { "ブロンズインゴット"};
 
     [SerializeField]
     [NamedArrayAttribute(new string[] { "鉄", "銅", "錫", "石炭", "金", "硫黄", "水", "粘土", "砂", "石膏", "方解石"})]
@@ -20,7 +22,11 @@ public class TextManager : MonoBehaviour
     [SerializeField]
     [NamedArrayAttribute(new string[] { "鉄インゴット", "銅インゴット", "錫インゴット", "金インゴット"})]
     private TextMeshProUGUI[] SmeltingFurnaceText = new TextMeshProUGUI[4];
-    // Start is called before the first frame update
+
+    [SerializeField]
+    [NamedArrayAttribute(new string[] { "ブロンズインゴット"})]
+    private TextMeshProUGUI[] AlloySmelterText = new TextMeshProUGUI[1];
+
     void Start()
     {
         ResourcenameChange();
@@ -33,6 +39,8 @@ public class TextManager : MonoBehaviour
     {
         ResourcenameChange();
         VeinNameChange();
+        SmeltingFurnaceNameChange();
+        AlloySmelterNameChange();
     }
 
     public void VeinResourceChange(int a){
@@ -44,11 +52,17 @@ public class TextManager : MonoBehaviour
         nowSmeltingFurnace = a;
     }
 
+    public void AlloySmelterResourceChange(int a){
+        nowAlloySmelter = a;
+    }
+
     public void ResourcenameChange(){
         if(GM.VeinBool){
             ResourceName.text = VeinName[nowVein]+"："+GM.VeinResource[nowVein];
         }else if(GM.SmeltingFurnaceBool){
             ResourceName.text = SmeltingFurnaceName[nowSmeltingFurnace]+"："+GM.SmeltingFurnaceResource[nowSmeltingFurnace];
+        }else if(GM.AlloySmelterBool){
+            ResourceName.text = AlloySmelterName[nowAlloySmelter]+"："+GM.AlloySmelterResource[nowAlloySmelter];
         }
 
     }
@@ -62,6 +76,12 @@ public class TextManager : MonoBehaviour
     public void SmeltingFurnaceNameChange(){
         for(int i = 0;i < 4;i++){
             SmeltingFurnaceText[i].text = SmeltingFurnaceName[i]+"：１/Click　生産量：１/s";
+        }
+    }
+
+    public void AlloySmelterNameChange(){
+        for(int i = 0;i < AlloySmelterName.Length;i++){
+            AlloySmelterText[i].text = AlloySmelterName[i]+"：１/Click　生産量：１/s";
         }
     }
 }

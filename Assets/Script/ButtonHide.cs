@@ -12,11 +12,16 @@ public class ButtonHide : MonoBehaviour
     [SerializeField] 
     [NamedArrayAttribute(new string[] { "鉄インゴット", "銅インゴット", "錫インゴット", "金インゴット" })]
     GameObject[] SmeltingFurnaceButton = new GameObject[4];
+
+    [SerializeField]
+    [NamedArrayAttribute(new string[] { "ブロンズインゴット"})]
+    GameObject[] AlloySmelterButton = new GameObject[1]; 
     // Start is called before the first frame update
     void Start()
     {
         VeinHide();
         SmeltingFurnaceHide();
+        AlloySmelterHide();
     }
 
     // Update is called once per frame
@@ -45,6 +50,16 @@ public class ButtonHide : MonoBehaviour
                 SmeltingFurnaceButton[i].SetActive(false);
             }else{
                 SmeltingFurnaceButton[i].SetActive(true);
+            }
+        }
+    }
+
+    public void AlloySmelterHide(){
+        for(int i = 0;i < AlloySmelterButton.Length;i++){
+            if(AlloySmelterButton[i].activeSelf) {
+                AlloySmelterButton[i].SetActive(false);
+            }else{
+                AlloySmelterButton[i].SetActive(true);
             }
         }
     }
