@@ -16,6 +16,10 @@ public class TextManager : MonoBehaviour
     string[] AlloySmelterName = { "ブロンズインゴット"};
 
     [SerializeField]
+    [NamedArrayAttribute(new string[] { "アイテムの詳細", "クリックでの生産量", "自動生産量"})]
+    private TextMeshProUGUI[] MachineMenuText = new TextMeshProUGUI[3];
+
+    [SerializeField]
     [NamedArrayAttribute(new string[] { "鉄", "銅", "錫", "石炭", "金", "硫黄", "水", "粘土", "砂", "石膏", "方解石"})]
     private TextMeshProUGUI[] VeinButtonText = new TextMeshProUGUI[11];
 
@@ -26,6 +30,8 @@ public class TextManager : MonoBehaviour
     [SerializeField]
     [NamedArrayAttribute(new string[] { "ブロンズインゴット"})]
     private TextMeshProUGUI[] AlloySmelterText = new TextMeshProUGUI[1];
+
+
 
     void Start()
     {
@@ -64,7 +70,10 @@ public class TextManager : MonoBehaviour
         }else if(GM.AlloySmelterBool){
             ResourceName.text = AlloySmelterName[nowAlloySmelter]+"："+GM.AlloySmelterResource[nowAlloySmelter];
         }
+    }
 
+    public void MachineMenuChange(string Material1, string Materia2, int Req1, int Req2){
+        MachineMenuText[0].text = "必要素材\n"+Material1+"　"+Req1+"/"+ResourceName.text+"\n";
     }
 
     public void VeinNameChange(){
