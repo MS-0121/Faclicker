@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour
     public bool AlloySmelterBool = false;
     [SerializeField] private TextManager TM;
     [SerializeField] private BackgroundChange BC;
+
+    //タップエフェクト
+    //[SerializeField] Image TapEffectPre;
+    //[SerializeField] Camera _camera;
     void Start()
     {
 
@@ -70,5 +74,10 @@ public class GameManager : MonoBehaviour
 
     public void nowAlloySmelterChange(int num){
         nowAlloySmelter = num;
+    }
+
+    public void ClickEffect(){
+        //var pos = _camera.ScreenToWorldPoint(Input.mousePosition + _camera.transform.forward * 10);
+
     }
 }
