@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class IconMouseOver : MonoBehaviour
 {
-    [SerializeField] GameObject test;
+    [SerializeField] GameObject Template;
     [SerializeField] Transform parents;
+    [SerializeField] VeinExpManager VEM;
+    [SerializeField] ItemExpGenerator IEG;
+    private bool ButtonClick = false;
+    string[] test4 = new string[2];
+    GameObject Exp;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +31,11 @@ public class IconMouseOver : MonoBehaviour
         Debug.Log("重なった");
     }
 
-    public void eventtest(){
-        GameObject Exp = Instantiate(test, parents);
-        Exp.transform.position = this.transform.position;
+    public void ItemExpEvent(int num){
+        Debug.Log(num);
+        IEG.GetExp(VEM.Exp(num));
+        float Template_y = this.transform.position.y + 37.5f;
+        Exp = Instantiate(Template, parents);
+        Exp.transform.position = new Vector3(this.transform.position.x, Template_y, this.transform.position.z);
     }
 }
